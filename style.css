@@ -60,6 +60,10 @@ button {
   text-align: center;
 }
 
+button:hover {
+  background-color: #1f1f1f;
+}
+
 .deleteBtn {
   background-color: red;
   color: #ededed;
@@ -75,10 +79,6 @@ button {
 
 .deleteBtn:hover {
   background-color: #8b0000;
-}
-
-button:hover {
-  background-color: #1f1f1f;
 }
 
 ::-webkit-scrollbar {
