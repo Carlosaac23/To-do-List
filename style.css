@@ -13,8 +13,8 @@
   --secondaryColor: #27272a;
   --secondaryColorHover: #4f4f4f;
   --fontColor: #ededed;
-  --deleteBtn: #ff1500;
-  --deleteBtnHover: #c41000;
+  --secondaryBtn: #ff1500;
+  --secondaryBtnHover: #c41000;
 }
 
 body {
