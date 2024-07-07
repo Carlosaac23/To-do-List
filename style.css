@@ -108,7 +108,7 @@ button:hover {
 }
 
 .deleteBtn {
-  background-color: var(--deleteBtn);
+  background-color: var(--secondaryBtn);
   color: var(--fontColor);
   font-family: 'Geist-Regular', sans-serif;
   font-weight: 500;
@@ -122,7 +122,7 @@ button:hover {
 }
 
 .deleteBtn:hover {
-  background-color: var(--deleteBtnHover);
+  background-color: var(--secondaryBtnHover);
 }
 
 /* Scrollbar */
