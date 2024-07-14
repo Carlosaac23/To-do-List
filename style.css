@@ -15,6 +15,8 @@
   --fontColor: #ededed;
   --secondaryBtn: #d93036;
   --secondaryBtnHover: #ff6166;
+  --addedMessage: #5ddf8d;
+  --alertMessage: #e75656;
 }
 
 body {
@@ -82,6 +84,26 @@ input {
   position: absolute;
   left: -20px;
   top: 1px;
+}
+
+.alertMessage {
+  background-color: transparent;
+  color: var(--alertMessage);
+  font-family: 'Geist-Regular', sans-serif;
+  font-size: 14px;
+  border: 1px solid var(--alertMessage);
+  border-radius: 5px;
+  padding: 7px;
+}
+
+.addedMessage {
+  background-color: transparent;
+  color: var(--addedMessage);
+  font-family: 'Geist-Regular', sans-serif;
+  font-size: 14px;
+  border: 1px solid var(--addedMessage);
+  border-radius: 5px;
+  padding: 7px;
 }
 
 .primaryBtn {
