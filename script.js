@@ -4,6 +4,7 @@ const list = document.getElementById('todo-list');
 
 const container = document.querySelector('.container');
 
+// Add tasks
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -12,11 +13,11 @@ form.addEventListener('submit', function (e) {
   const taskText = input.value.trim();
   if (taskText === '') return;
 
-  const listItem = document.createElement('LI');
+  const listItem = document.createElement('li');
   listItem.textContent = taskText;
   listItem.className = 'listItem';
 
-  const deleteButton = document.createElement('BUTTON');
+  const deleteButton = document.createElement('button');
   deleteButton.textContent = 'Delete';
   deleteButton.className = 'deleteBtn';
   deleteButton.addEventListener('click', function () {
@@ -30,6 +31,7 @@ form.addEventListener('submit', function (e) {
   saveTasks();
 });
 
+// Show succesfull message
 function addedMessage(message) {
   const advanceWarning = document.querySelector('.addedMessage');
   advanceWarning?.remove();
@@ -44,6 +46,7 @@ function addedMessage(message) {
   }, 2000);
 }
 
+// Show alert message
 function alertMessage(message) {
   const advanceWarning = document.querySelector('.alertMessage');
   advanceWarning?.remove();
@@ -58,8 +61,7 @@ function alertMessage(message) {
   }, 3000);
 }
 
-document.addEventListener('DOMContentLoaded', loadTasks);
-
+// Save tasks on LocalStorage
 function saveTasks() {
   const tasks = [];
   document.querySelectorAll('.listItem').forEach(item => {
@@ -68,14 +70,18 @@ function saveTasks() {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+document.addEventListener('DOMContentLoaded', loadTasks);
+
+// Delete tasks
 function loadTasks() {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
   tasks.forEach(taskText => {
-    const listItem = document.createElement('LI');
+    const listItem = document.createElement('li');
     listItem.textContent = taskText;
     listItem.className = 'listItem';
 
-    const deleteButton = document.createElement('BUTTON');
+    const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
     deleteButton.className = 'deleteBtn';
     deleteButton.addEventListener('click', function () {

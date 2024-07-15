@@ -13,8 +13,10 @@
   --secondaryColor: #242424;
   --secondaryColorHover: #1f1f1f;
   --fontColor: #ededed;
-  --secondaryBtn: #d93036;
-  --secondaryBtnHover: #ff6166;
+  --inputHover: #a8a8a8;
+  --addBtnHover: #c5c5c5;
+  --deleteBtn: #d93036;
+  --deleteBtnHover: #ff6166;
   --addedMessage: #5ddf8d;
   --alertMessage: #e75656;
 }
@@ -52,18 +54,22 @@ legend {
 }
 
 input {
-  flex-grow: 1;
   font-family: 'Geist-Regular', sans-serif;
   font-weight: 500;
   font-size: 14px;
   background-color: var(--primaryColor);
   color: var(--fontColor);
   padding: 7px;
-  border-radius: 5px;
+  border-radius: 7px;
   border: 1px solid var(--secondaryColor);
   margin-bottom: 15px;
   margin-right: 10px;
   width: 230px;
+  transition: border 0.5s ease;
+}
+
+input:hover {
+  border: 1px solid var(--inputHover);
 }
 
 .listItem {
@@ -87,60 +93,63 @@ input {
 }
 
 .alertMessage {
-  background-color: transparent;
-  color: var(--alertMessage);
   font-family: 'Geist-Regular', sans-serif;
   font-size: 14px;
+  background-color: transparent;
+  color: var(--alertMessage);
   border: 1px solid var(--alertMessage);
   border-radius: 5px;
   padding: 7px;
 }
 
 .addedMessage {
-  background-color: transparent;
-  color: var(--addedMessage);
   font-family: 'Geist-Regular', sans-serif;
   font-size: 14px;
+  background-color: transparent;
+  color: var(--addedMessage);
   border: 1px solid var(--addedMessage);
   border-radius: 5px;
   padding: 7px;
 }
 
-.primaryBtn {
-  background-color: var(--primaryColor);
-  color: var(--fontColor);
+.addBtn {
   font-family: 'Geist-Regular', sans-serif;
-  font-weight: 500;
   font-size: 14px;
-  border: 1px solid var(--secondaryColor);
-  border-radius: 5px;
+  background-color: var(--fontColor);
+  color: var(--secondaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 7px;
   padding: 7px;
   width: 60px;
   margin-bottom: 15px;
   cursor: pointer;
-  transition: background-color 0.4s ease;
+  transition: background-color 0.5s ease;
 }
 
-.primaryBtn:hover {
-  background-color: var(--secondaryColorHover);
+.addBtn:hover {
+  background-color: var(--addBtnHover);
 }
 
 .deleteBtn {
-  background-color: var(--secondaryBtn);
-  color: var(--fontColor);
   font-family: 'Geist-Regular', sans-serif;
-  font-weight: 500;
   font-size: 14px;
+  background-color: var(--deleteBtn);
+  color: var(--fontColor);
+  display: flex;
+  align-items: center;
   border: none;
-  border-radius: 5px;
+  border-radius: 7px;
   padding: 7px;
   width: 60px;
   cursor: pointer;
-  transition: background-color 0.4s ease;
+  transition: background-color 0.5s ease;
 }
 
 .deleteBtn:hover {
-  background-color: var(--secondaryBtnHover);
+  background-color: var(--deleteBtnHover);
 }
 
 /* Scrollbar */
