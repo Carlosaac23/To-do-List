@@ -14,7 +14,7 @@
   --secondaryColorHover: #1f1f1f;
   --fontColor: #ededed;
   --inputHover: #a8a8a8;
-  --addBtnHover: #c5c5c5;
+  --btnHover: #c5c5c5;
   --deleteBtn: #d93036;
   --deleteBtnHover: #ff6166;
   --addedMessage: #5ddf8d;
@@ -42,7 +42,7 @@ body {
 
 legend {
   font-family: 'Geist-Bold', sans-serif;
-  font-size: 40px;
+  font-size: 50px;
   text-align: start;
   color: var(--fontColor);
   margin-bottom: 30px;
@@ -78,9 +78,18 @@ input:hover {
   align-items: center;
   color: var(--fontColor);
   margin-bottom: 17px;
-  margin-left: -17px;
+  padding-right: 0;
+  margin-left: -20px;
   font-size: 15px;
   position: relative;
+}
+
+.listItem span {
+  flex-grow: 1;
+  padding-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .listItem::before {
@@ -115,11 +124,9 @@ input:hover {
 .addBtn {
   font-family: 'Geist-Regular', sans-serif;
   font-size: 14px;
+  font-weight: 600;
   background-color: var(--fontColor);
   color: var(--secondaryColor);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: none;
   border-radius: 7px;
   padding: 7px;
@@ -130,16 +137,39 @@ input:hover {
 }
 
 .addBtn:hover {
-  background-color: var(--addBtnHover);
+  background-color: var(--btnHover);
+}
+
+.editBtn,
+.deleteBtn {
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.editBtn {
+  font-family: 'Geist-Regular', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--fontColor);
+  color: var(--secondaryColor);
+  border: none;
+  border-radius: 7px;
+  padding: 7px;
+  width: 60px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.editBtn:hover {
+  background-color: var(--btnHover);
 }
 
 .deleteBtn {
   font-family: 'Geist-Regular', sans-serif;
   font-size: 14px;
+  font-weight: 400;
   background-color: var(--deleteBtn);
   color: var(--fontColor);
-  display: flex;
-  align-items: center;
   border: none;
   border-radius: 7px;
   padding: 7px;
@@ -150,6 +180,24 @@ input:hover {
 
 .deleteBtn:hover {
   background-color: var(--deleteBtnHover);
+}
+
+.div-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.footer {
+  width: 100vw;
+  text-align: center;
+  color: var(--fontColor);
+}
+
+.a-footer {
+  text-decoration: none;
+  color: var(--fontColor);
 }
 
 /* Scrollbar */
