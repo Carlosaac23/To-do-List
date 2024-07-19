@@ -10,15 +10,14 @@
 
 :root {
   --primaryColor: #09090b;
-  --secondaryColor: #242424;
-  --secondaryColorHover: #1f1f1f;
-  --fontColor: #ededed;
+  --secondaryColor: #18181b;
+  --secondaryColorHover: #27272a;
+  --fontColor: #fafafa;
+  --fontColorHover: #a1a1aa;
   --inputHover: #a8a8a8;
-  --btnHover: #c5c5c5;
-  --deleteBtn: #d93036;
-  --deleteBtnHover: #ff6166;
-  --addedMessage: #5ddf8d;
-  --alertMessage: #e75656;
+  --greenMessage: #a3e635;
+  --redMessage: #f87171;
+  --yellowMessage: #fde047;
 }
 
 body {
@@ -72,6 +71,11 @@ input:hover {
   border: 1px solid var(--inputHover);
 }
 
+::placeholder {
+  color: var(--inputHover);
+  font-weight: 500;
+}
+
 .listItem {
   display: flex;
   justify-content: space-between;
@@ -85,6 +89,12 @@ input:hover {
 }
 
 .listItem span {
+  cursor: pointer;
+  transition: text-decoration 0.4s;
+}
+
+.listItem span {
+  font-size: 17px;
   flex-grow: 1;
   padding-right: 10px;
   overflow: hidden;
@@ -101,24 +111,34 @@ input:hover {
   top: 1px;
 }
 
-.alertMessage {
+.redMessage {
   font-family: 'Geist-Regular', sans-serif;
   font-size: 14px;
   background-color: transparent;
-  color: var(--alertMessage);
-  border: 1px solid var(--alertMessage);
-  border-radius: 5px;
-  padding: 7px;
+  color: var(--redMessage);
+  border: 1px solid var(--redMessage);
+  border-radius: 10px;
+  padding: 8px;
 }
 
-.addedMessage {
+.greenMessage {
   font-family: 'Geist-Regular', sans-serif;
   font-size: 14px;
   background-color: transparent;
-  color: var(--addedMessage);
-  border: 1px solid var(--addedMessage);
-  border-radius: 5px;
-  padding: 7px;
+  color: var(--greenMessage);
+  border: 1px solid var(--greenMessage);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.yellowMessage {
+  font-family: 'Geist-Regular', sans-serif;
+  font-size: 14px;
+  background-color: transparent;
+  color: var(--yellowMessage);
+  border: 1px solid var(--yellowMessage);
+  border-radius: 10px;
+  padding: 8px;
 }
 
 .addBtn {
@@ -126,60 +146,56 @@ input:hover {
   font-size: 14px;
   font-weight: 600;
   background-color: var(--fontColor);
-  color: var(--secondaryColor);
+  color: var(--primaryColor);
   border: none;
   border-radius: 7px;
   padding: 7px;
   width: 60px;
   margin-bottom: 15px;
   cursor: pointer;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.4s ease;
 }
 
 .addBtn:hover {
-  background-color: var(--btnHover);
+  background-color: var(--fontColorHover);
 }
 
-.editBtn,
-.deleteBtn {
-  margin-left: 10px;
-  flex-shrink: 0;
-}
-
-.editBtn {
-  font-family: 'Geist-Regular', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  background-color: var(--fontColor);
-  color: var(--secondaryColor);
+.edit-button {
+  background-color: var(--primaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   border: none;
-  border-radius: 7px;
-  padding: 7px;
-  width: 60px;
   cursor: pointer;
-  transition: background-color 0.5s ease;
 }
 
-.editBtn:hover {
-  background-color: var(--btnHover);
-}
-
-.deleteBtn {
-  font-family: 'Geist-Regular', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  background-color: var(--deleteBtn);
-  color: var(--fontColor);
+.delete-button {
+  background-color: var(--primaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   border: none;
-  border-radius: 7px;
-  padding: 7px;
-  width: 60px;
   cursor: pointer;
-  transition: background-color 0.5s ease;
 }
 
-.deleteBtn:hover {
-  background-color: var(--deleteBtnHover);
+.svg-icon {
+  transition: stroke 0.4s ease;
+}
+
+.svg-icon:hover {
+  stroke: var(--fontColorHover);
+}
+
+.svg-icon2 {
+  transition: stroke 0.4s ease;
+}
+
+.svg-icon2:hover {
+  stroke: var(--redMessage);
 }
 
 .div-footer {
@@ -218,10 +234,6 @@ input:hover {
 
 /* Smartphones */
 @media screen and (max-width: 767px) {
-  body {
-    padding: 20px;
-  }
-
   .input-button-container {
     display: flex;
     flex-direction: row;
