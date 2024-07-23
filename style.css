@@ -100,13 +100,7 @@ input:valid ~ label {
   margin-bottom: 17px;
   padding-right: 0;
   margin-left: -20px;
-  font-size: 15px;
   position: relative;
-}
-
-.listItem span {
-  cursor: pointer;
-  transition: text-decoration 0.4s;
 }
 
 .listItem span {
@@ -116,6 +110,8 @@ input:valid ~ label {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  cursor: pointer;
+  transition: text-decoration 0.4s;
 }
 
 .listItem::before {
@@ -265,9 +261,77 @@ input:valid ~ label {
   }
 
   .input-field input {
-    display: flex;
-    justify-content: space-between;
-    width: 40px;
-    height: 25px;
+    width: 220px;
+    height: 40px;
+    font-size: 15px;
+    margin-left: 10px;
+  }
+
+  .input-field label {
+    font-size: 14px;
+    left: 20px;
+  }
+
+  .addBtn {
+    height: 40px;
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  input:focus ~ label,
+  input:valid ~ label {
+    font-size: 11px;
+  }
+
+  #todo-list {
+    width: 300px;
+  }
+
+  .listItem span {
+    font-size: 14px;
+    margin-left: 50px;
+  }
+
+  .listItem::before {
+    left: 33px;
+    top: -6px;
+  }
+
+  .edit-button {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+  }
+
+  .delete-button {
+    width: 18px;
+    height: 18px;
+  }
+
+  .redMessage {
+    text-align: center;
+    font-size: 12px;
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 15px;
+    margin-left: 20%;
+  }
+
+  .greenMessage {
+    text-align: center;
+    font-size: 12px;
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 15px;
+    margin-left: 20%;
+  }
+
+  .yellowMessage {
+    text-align: center;
+    font-size: 12px;
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 15px;
+    margin-left: 20%;
   }
 }
