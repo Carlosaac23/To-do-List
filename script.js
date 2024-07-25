@@ -70,7 +70,7 @@ form.addEventListener('submit', e => {
 
     listItem.append(taskTextElement, editButton, deleteButton);
     list.appendChild(listItem);
-    greenMessage('Task Added');
+    greenMessage('Added Task');
   }
   input.value = '';
   saveTasks();
